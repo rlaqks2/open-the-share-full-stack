@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-800;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .bg-pattern {
+    background-color: #f8fafc;
+    background-image: radial-gradient(#d1fae5 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+}
+
+@keyframes fadeIn { 
+  from { opacity: 0; transform: translateY(20px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+.fade-in-section { 
+  opacity: 0; 
+}
+.fade-in-section.is-visible { 
+  animation: fadeIn 0.8s ease-out forwards; 
+}
+
+@keyframes slideDown { 
+  from { opacity: 0; transform: translateY(-20px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+.animate-slideDown { 
+  animation: slideDown 0.3s ease-out forwards; 
+}
+
+@keyframes modalFadeIn { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
+.animate-modalFadeIn { 
+  animation: modalFadeIn 0.3s ease-out forwards; 
+}
